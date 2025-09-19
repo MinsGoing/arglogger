@@ -12,6 +12,24 @@ class ArgLogger:
     
     This class automatically creates database tables or CSV files based on
     argparse configurations and provides methods to save experiment results.
+    Example usage:
+    ---------------------------------------------------------------------
+        # 1. 创建logger
+        arglogger = ArgLogger(
+            experiment_name='test_override',  # table name or file name
+            backend='csv',  # or 'sqlite'
+            storage_path='experiments/test_override.csv',
+            args=args,
+            auto_timestamp=True  # auto add created_at and updated_at columns
+        )
+
+        # 2. 记录结果
+        results = {'accuracy': 0.95, 'loss': 0.1} # allow add new columns
+        arglogger.log_result(results)
+
+        # 3. 关闭
+        arglogger.close()
+    ---------------------------------------------------------------------
     """
     
     def __init__(
