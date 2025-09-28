@@ -40,5 +40,5 @@ dev = [
 
 [project.urls]
 Homepage = "https://github.com/MinsGoing/arglogger"
-Repository = "https://github.com/MinsGoing/arglog.git"
-Issues = "https://github.com/MinsGoing/arglog/issues"
+Repository = "https://github.com/MinsGoing/arglogger.git"
+Issues = "https://github.com/MinsGoing/arglogger/issues"
